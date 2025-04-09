@@ -155,7 +155,7 @@ with tab1:
 
     with col1c:
         current_level3 = st.selectbox(
-            'Current Hero 23 Level',
+            'Current Hero 3 Level',
             np.arange(1,150))
     with col2c:
         target_level3 = st.selectbox(
@@ -168,6 +168,46 @@ with tab1:
         st.write('Required Experience: ', numformat(req_exp3), '({:0,})'.format(req_exp3), 'for level ', int(current_level3), ' to level ', target_level3)
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp3), 'for level ', int(current_level3), ' to level ', target_level3)
+
+    ## HERO 4
+
+    col1d, col2d = st.columns(2)
+
+    with col1d:
+        current_level4 = st.selectbox(
+            'Current Hero 4 Level',
+            np.arange(1,150))
+    with col2d:
+        target_level4 = st.selectbox(
+        'Target Hero 4 Level',
+        np.arange(current_level4+1,151))
+
+    req_exp4 = sum(level_exp[current_level4-1:target_level4])
+
+    if numformat(req_exp4) != '':
+        st.write('Required Experience: ', numformat(req_exp4), '({:0,})'.format(req_exp4), 'for level ', int(current_level4), ' to level ', target_level4)
+    else:
+        st.write('Required Experience: ', '{:0,}'.format(req_exp4), 'for level ', int(current_level4), ' to level ', target_level4)
+
+    ## HERO 5
+
+    col1e, col2e = st.columns(2)
+
+    with col1e:
+        current_level5 = st.selectbox(
+            'Current Hero 5 Level',
+            np.arange(1,150))
+    with col2e:
+        target_level5 = st.selectbox(
+        'Target Hero 5 Level',
+        np.arange(current_level5+1,151))
+
+    req_exp5 = sum(level_exp[current_level5-1:target_level5])
+
+    if numformat(req_exp5) != '':
+        st.write('Required Experience: ', numformat(req_exp5), '({:0,})'.format(req_exp5), 'for level ', int(current_level5), ' to level ', target_level5)
+    else:
+        st.write('Required Experience: ', '{:0,}'.format(req_exp5), 'for level ', int(current_level5), ' to level ', target_level5)
 
 
     st.markdown('## VS Hero Day Points Calculator')
