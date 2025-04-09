@@ -209,6 +209,15 @@ with tab1:
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp5), 'for level ', int(current_level5), ' to level ', target_level5)
 
+    ## HERO TOTALS
+
+    req_exp_total = sum(req_exp, req_exp2, req_exp3, req_exp4, req_exp5)
+
+    if numformat(req_exp_total) != '':
+        st.write('Total Required Experience: ', numformat(req_exp_total), '({:0,})'.format(req_exp_total))
+    else:
+        st.write('Total Required Experience: ', '{:0,}'.format(req_exp_total))
+
 
     st.markdown('## VS Hero Day Points Calculator')
     vs_event = st.selectbox(
