@@ -224,10 +224,10 @@ with tab1:
         'VS reward per 660xp points:',
         [1,2])
 
-    if req_exp/660 >= 1000000:
-        st.write('VS Points: ', numformat(int(req_exp/660)*vs_event), '({:0,})'.format(int(req_exp/660)*vs_event) )
+    if req_exp_total/660 >= 1000000:
+        st.write('VS Points: ', numformat(int(req_exp_total/660)*vs_event), '({:0,})'.format(int(req_exp_total/660)*vs_event) )
     else:
-        st.write('VS Points: ', '{:0,}'.format(int(req_exp/660)*vs_event) )
+        st.write('VS Points: ', '{:0,}'.format(int(req_exp_total/660)*vs_event) )
 
     st.markdown(footer,unsafe_allow_html=True)
 ###############################################TABS###################################################
