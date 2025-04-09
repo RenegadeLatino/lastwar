@@ -113,11 +113,11 @@ with tab1:
 
     with col1:
         current_level = st.selectbox(
-            'Current Hero Level',
+            'Current Hero 1 Level',
             np.arange(1,150))
     with col2:
         target_level = st.selectbox(
-        'Target Hero Level',
+        'Target Hero 1 Level',
         np.arange(current_level+1,151))
 
     st.write('Going from level ', int(current_level), ' to level ', target_level)
@@ -128,6 +128,24 @@ with tab1:
         st.write('Required Experience: ', numformat(req_exp), '({:0,})'.format(req_exp))
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp))
+
+    with col1:
+        current_level2 = st.selectbox(
+            'Current Hero 2 Level',
+            np.arange(1,150))
+    with col2:
+        target_level2 = st.selectbox(
+        'Target Hero 2 Level',
+        np.arange(current_level2+1,151))
+
+    st.write('Going from level ', int(current_level2), ' to level ', target_level2)
+
+    req_exp2 = sum(level_exp[current_level2-1:target_level2])
+
+    if numformat(req_exp2) != '':
+        st.write('Required Experience: ', numformat(req_exp2), '({:0,})'.format(req_exp2))
+    else:
+        st.write('Required Experience: ', '{:0,}'.format(req_exp2))
 
 
     st.markdown('## VS Hero Day Points Calculator')
