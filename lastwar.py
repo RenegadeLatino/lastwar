@@ -129,11 +129,13 @@ with tab1:
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp))
 
-    with col1:
+    col1b, col2b = st.columns(2)
+
+    with col1b:
         current_level2 = st.selectbox(
             'Current Hero 2 Level',
             np.arange(1,150))
-    with col2:
+    with col2b:
         target_level2 = st.selectbox(
         'Target Hero 2 Level',
         np.arange(current_level2+1,151))
