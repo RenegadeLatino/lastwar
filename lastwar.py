@@ -107,7 +107,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Hero Exp", "Speed-Up", "Stamina", "Loot
 ######################################################################################################
 
 with tab1:
-    st.header('Hero Level Calculator')
+    st.header('Squad Level Calculator')
 
     col1, col2 = st.columns(2)
 
@@ -120,14 +120,14 @@ with tab1:
         'Target Hero 1 Level',
         np.arange(current_level+1,151))
 
-    st.write('Going from level ', int(current_level), ' to level ', target_level)
+    #st.write('Level ', int(current_level), ' to level ', target_level)
 
     req_exp = sum(level_exp[current_level-1:target_level])
 
     if numformat(req_exp) != '':
-        st.write('Required Experience: ', numformat(req_exp), '({:0,})'.format(req_exp))
+        st.write('Required Experience: ', numformat(req_exp), '({:0,})'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
     else:
-        st.write('Required Experience: ', '{:0,}'.format(req_exp))
+        st.write('Required Experience: ', '{:0,}'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
 
     col1b, col2b = st.columns(2)
 
