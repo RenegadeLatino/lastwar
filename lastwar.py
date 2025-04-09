@@ -211,7 +211,7 @@ with tab1:
 
     ## HERO TOTALS
 
-    req_exp_total = sum(req_exp, req_exp2, req_exp3, req_exp4, req_exp5)
+    req_exp_total = req_exp + req_exp2 + req_exp3 + req_exp4 + req_exp5
 
     if numformat(req_exp_total) != '':
         st.write('Total Required Experience: ', numformat(req_exp_total), '({:0,})'.format(req_exp_total))
