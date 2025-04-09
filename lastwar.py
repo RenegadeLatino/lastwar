@@ -120,8 +120,6 @@ with tab1:
         'Target Hero 1 Level',
         np.arange(current_level+1,151))
 
-    #st.write('Level ', int(current_level), ' to level ', target_level)
-
     req_exp = sum(level_exp[current_level-1:target_level])
 
     if numformat(req_exp) != '':
@@ -140,14 +138,12 @@ with tab1:
         'Target Hero 2 Level',
         np.arange(current_level2+1,151))
 
-    st.write('Going from level ', int(current_level2), ' to level ', target_level2)
-
     req_exp2 = sum(level_exp[current_level2-1:target_level2])
 
     if numformat(req_exp2) != '':
-        st.write('Required Experience: ', numformat(req_exp2), '({:0,})'.format(req_exp2))
+        st.write('Required Experience: ', numformat(req_exp2), '({:0,})'.format(req_exp2), 'for level ', int(current_level2), ' to level ', target_level2)
     else:
-        st.write('Required Experience: ', '{:0,}'.format(req_exp2))
+        st.write('Required Experience: ', '{:0,}'.format(req_exp2), 'for level ', int(current_level), ' to level ', target_level)
 
 
     st.markdown('## VS Hero Day Points Calculator')
