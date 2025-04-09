@@ -109,6 +109,8 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(["Hero Exp", "Speed-Up", "Stamina", "Loot
 with tab1:
     st.header('Squad Level Calculator')
 
+    ## HERO 1
+
     col1, col2 = st.columns(2)
 
     with col1:
@@ -127,6 +129,8 @@ with tab1:
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
 
+    ## HERO 2
+
     col1b, col2b = st.columns(2)
 
     with col1b:
@@ -143,7 +147,27 @@ with tab1:
     if numformat(req_exp2) != '':
         st.write('Required Experience: ', numformat(req_exp2), '({:0,})'.format(req_exp2), 'for level ', int(current_level2), ' to level ', target_level2)
     else:
-        st.write('Required Experience: ', '{:0,}'.format(req_exp2), 'for level ', int(current_level), ' to level ', target_level)
+        st.write('Required Experience: ', '{:0,}'.format(req_exp2), 'for level ', int(current_level2), ' to level ', target_level2)
+
+    ## HERO 3
+
+    col1c, col2c = st.columns(2)
+
+    with col1c:
+        current_level3 = st.selectbox(
+            'Current Hero 23 Level',
+            np.arange(1,150))
+    with col2c:
+        target_level3 = st.selectbox(
+        'Target Hero 3 Level',
+        np.arange(current_level3+1,151))
+
+    req_exp3 = sum(level_exp[current_level3-1:target_level3])
+
+    if numformat(req_exp3) != '':
+        st.write('Required Experience: ', numformat(req_exp3), '({:0,})'.format(req_exp3), 'for level ', int(current_level3), ' to level ', target_level3)
+    else:
+        st.write('Required Experience: ', '{:0,}'.format(req_exp3), 'for level ', int(current_level3), ' to level ', target_level3)
 
 
     st.markdown('## VS Hero Day Points Calculator')
