@@ -134,12 +134,13 @@ with tab1:
         st.text_input('Hero 1 Upgrade Cost', disabled=True, placeholder=st.session_state.h1)
 
     req_exp = sum(level_exp[current_level:target_level])
-    st.session_state.h1=req_exp
 
     if numformat(req_exp) != '':
         st.write('Required Experience: ', numformat(req_exp), '({:0,})'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
+        st.session_state.h1=numformat(req_exp)
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
+        st.session_state.1='{:0,}'.format(req_exp)
 
     ## HERO 2
 
