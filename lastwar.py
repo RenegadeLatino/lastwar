@@ -113,8 +113,10 @@ with tab1:
 
     ## HERO 1
 
+    if "h1" not in st.session_state:
+        st.session_state.h1 = 0
+
     col0, col1, col2, col3 = st.columns(4)
-    st.session_state.h1 = 0
 
     with col0:
         hero0name = st.selectbox(
