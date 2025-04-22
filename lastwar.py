@@ -39,6 +39,8 @@ level_exp = [0,100,200,300,400, #1-5
             165000000,170000000,175000000,180000000,185000000 #146-150
             ]
 
+names = ['Carlie','Lucius','Morrison','DVA','Schuyler']
+
 def numformat(num):
     fn = 0
     if num > 999999999:
@@ -111,8 +113,12 @@ with tab1:
 
     ## HERO 1
 
-    col1, col2 = st.columns(2)
+    col0, col1, col2 = st.columns(3)
 
+    with col0:
+        hero0name = st.selectbox(
+            'Hero 1 Name',
+            names)
     with col1:
         current_level = st.selectbox(
             'Current Hero 1 Level',
