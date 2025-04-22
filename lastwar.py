@@ -122,7 +122,7 @@ with tab1:
         'Target Hero 1 Level',
         np.arange(current_level+1,151))
 
-    req_exp = sum(level_exp[current_level-1:target_level])
+    req_exp = sum(level_exp[current_level-1:target_level-1])
 
     if numformat(req_exp) != '':
         st.write('Required Experience: ', numformat(req_exp), '({:0,})'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
