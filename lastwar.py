@@ -140,7 +140,7 @@ with tab1:
         st.session_state.h1=numformat(req_exp)
     else:
         st.write('Required Experience: ', '{:0,}'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
-        st.session_state.1='{:0,}'.format(req_exp)
+        st.session_state.h1='{:0,}'.format(req_exp)
 
     ## HERO 2
 
