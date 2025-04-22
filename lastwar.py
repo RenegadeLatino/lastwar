@@ -113,7 +113,8 @@ with tab1:
 
     ## HERO 1
 
-    col0, col1, col2 = st.columns(3)
+    col0, col1, col2, col3 = st.columns(4)
+    st.session_state.h1 = 0
 
     with col0:
         hero0name = st.selectbox(
@@ -127,8 +128,11 @@ with tab1:
         target_level = st.selectbox(
         'Target Hero 1 Level',
         np.arange(current_level+1,151))
+    with col3:
+        st.text_input('Hero 1 Upgrade Cost', disabled=True, placeholder=st.session_state.h1)
 
     req_exp = sum(level_exp[current_level:target_level])
+    st.session_state.h1=req_exp
 
     if numformat(req_exp) != '':
         st.write('Required Experience: ', numformat(req_exp), '({:0,})'.format(req_exp), 'for level ', int(current_level), ' to level ', target_level)
