@@ -137,8 +137,12 @@ with tab1:
 
     ## HERO 2
 
-    col1b, col2b = st.columns(2)
+    col0b, col1b, col2b = st.columns(3)
 
+    with col0b:
+        hero0bname = st.selectbox(
+            'Hero 2 Name',
+            names)
     with col1b:
         current_level2 = st.selectbox(
             'Current Hero 2 Level',
@@ -157,8 +161,12 @@ with tab1:
 
     ## HERO 3
 
-    col1c, col2c = st.columns(2)
+    col0c, col1c, col2c = st.columns(3)
 
+    with col0c:
+        hero0cname = st.selectbox(
+            'Hero 3 Name',
+            names)
     with col1c:
         current_level3 = st.selectbox(
             'Current Hero 3 Level',
@@ -177,8 +185,12 @@ with tab1:
 
     ## HERO 4
 
-    col1d, col2d = st.columns(2)
+    col0d, col1d, col2d = st.columns(3)
 
+    with col0d:
+        hero0dname = st.selectbox(
+            'Hero 4 Name',
+            names)
     with col1d:
         current_level4 = st.selectbox(
             'Current Hero 4 Level',
@@ -197,8 +209,12 @@ with tab1:
 
     ## HERO 5
 
-    col1e, col2e = st.columns(2)
+    col0e, col1e, col2e = st.columns(3)
 
+    with col0e:
+        hero0ename = st.selectbox(
+            'Hero 5 Name',
+            names)
     with col1e:
         current_level5 = st.selectbox(
             'Current Hero 5 Level',
