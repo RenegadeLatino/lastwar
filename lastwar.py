@@ -142,7 +142,7 @@ with tab1:
         'Target Hero 2 Level',
         np.arange(current_level2+1,151))
 
-    req_exp2 = sum(level_exp[current_level2-1:target_level2])
+    req_exp2 = sum(level_exp[current_level2:target_level2])
 
     if numformat(req_exp2) != '':
         st.write('Required Experience: ', numformat(req_exp2), '({:0,})'.format(req_exp2), 'for level ', int(current_level2), ' to level ', target_level2)
@@ -162,7 +162,7 @@ with tab1:
         'Target Hero 3 Level',
         np.arange(current_level3+1,151))
 
-    req_exp3 = sum(level_exp[current_level3-1:target_level3])
+    req_exp3 = sum(level_exp[current_level3:target_level3])
 
     if numformat(req_exp3) != '':
         st.write('Required Experience: ', numformat(req_exp3), '({:0,})'.format(req_exp3), 'for level ', int(current_level3), ' to level ', target_level3)
@@ -182,7 +182,7 @@ with tab1:
         'Target Hero 4 Level',
         np.arange(current_level4+1,151))
 
-    req_exp4 = sum(level_exp[current_level4-1:target_level4])
+    req_exp4 = sum(level_exp[current_level4:target_level4])
 
     if numformat(req_exp4) != '':
         st.write('Required Experience: ', numformat(req_exp4), '({:0,})'.format(req_exp4), 'for level ', int(current_level4), ' to level ', target_level4)
@@ -202,7 +202,7 @@ with tab1:
         'Target Hero 5 Level',
         np.arange(current_level5+1,151))
 
-    req_exp5 = sum(level_exp[current_level5-1:target_level5])
+    req_exp5 = sum(level_exp[current_level5:target_level5])
 
     if numformat(req_exp5) != '':
         st.write('Required Experience: ', numformat(req_exp5), '({:0,})'.format(req_exp5), 'for level ', int(current_level5), ' to level ', target_level5)
