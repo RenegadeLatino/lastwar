@@ -130,7 +130,7 @@ with tab1:
     with col2:
         target_level = st.selectbox(
         'Target Hero 1 Level',
-        np.arange(current_level+1,151))
+        np.arange(current_level,151))
     #with col3:
     #    st.text_input('Hero 1 Upgrade Cost', disabled=True, placeholder=st.session_state.h1)
 
@@ -158,7 +158,7 @@ with tab1:
     with col2b:
         target_level2 = st.selectbox(
         'Target Hero 2 Level',
-        np.arange(current_level2+1,151))
+        np.arange(current_level2,151))
 
     req_exp2 = sum(level_exp[current_level2:target_level2])
 
@@ -182,7 +182,7 @@ with tab1:
     with col2c:
         target_level3 = st.selectbox(
         'Target Hero 3 Level',
-        np.arange(current_level3+1,151))
+        np.arange(current_level3,151))
 
     req_exp3 = sum(level_exp[current_level3:target_level3])
 
@@ -206,7 +206,7 @@ with tab1:
     with col2d:
         target_level4 = st.selectbox(
         'Target Hero 4 Level',
-        np.arange(current_level4+1,151))
+        np.arange(current_level4,151))
 
     req_exp4 = sum(level_exp[current_level4:target_level4])
 
@@ -230,7 +230,7 @@ with tab1:
     with col2e:
         target_level5 = st.selectbox(
         'Target Hero 5 Level',
-        np.arange(current_level5+1,151))
+        np.arange(current_level5,151))
 
     req_exp5 = sum(level_exp[current_level5:target_level5])
 
